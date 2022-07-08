@@ -1,0 +1,20 @@
+server:
+  port: 9092
+
+
+#  spring.cloud.nacos.discovery.namespace=public
+#  spring.cloud.nacos.discovery.username=nacos
+#  spring.cloud.nacos.discovery.password=nacos
+#  spring.application.name=service
+spring:
+  application:
+    name: service
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+        ephemeral: false # false指在nacos永久保存实例，服务挂了该实例还在nacos
+#  spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
